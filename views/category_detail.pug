@@ -2,11 +2,11 @@ extends layout
 
 block content
   h1.text-center= title
-  p.font-medium Number of categories: #{count}
+  p.font-medium Number of items: #{count}
   div.categories-container
-    each category in categories
+    each item in items
       div.category-container
-        a(href=category.url) #{category.name}
+        a(href=item.url) #{item.name}
     
     else 
       p There are no categories.
