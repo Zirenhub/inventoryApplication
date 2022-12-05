@@ -1,12 +1,19 @@
 extends layout
 
 block content
-  h1.text-center= title
-  p.font-medium Number of items: #{count}
+  div.flex
+    div.spacer
+      a(href='/')
+        button.button-basic Home
+    h1.text-center.flex= title
+    div.spacer
+  
   div.categories-container
-    each item in items
-      div.category-container
+    p.font-medium Number of items: #{count}
+    ul.category-container
+      each item in items
+        li
         a(href=item.url) #{item.name}
-    
-    else 
-      p There are no categories.
+
+      else 
+        p There are no items.

@@ -1,12 +1,19 @@
 extends layout
 
 block content
-  h1.text-center= title
-  p.font-medium Number of categories: #{count}
-  div.categories-container
-    each category in categories
-      div.category-container
-        a(href=category.url) #{category.name}
-    
-    else 
-      p There are no categories.
+  div.main-container
+    div.content-container
+      h1.text-center= title
+      div.categories-container
+        p.font-medium Number of categories: #{count}
+        ul.category-container
+          each category in categories
+            li
+              a(href=category.url) #{category.name}
+        
+          else 
+            p There are no categories.
+
+    div.form-container
+      a(href=category.url) #{category.name}
+

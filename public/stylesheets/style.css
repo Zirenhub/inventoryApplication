@@ -9,26 +9,81 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   padding: 20px;
+  height: 100vh;
 }
 
 .categories-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.category-container {
+  margin-top: 10px;
 }
 
 .text-center {
   text-align: center;
 }
 
+.text-center.flex {
+  flex-grow: 1;
+  justify-content: center;
+  align-self: center;
+}
+
+.spacer {
+  flex: 1;
+  align-self: center;
+}
+
+.button-basic {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: ease-in-out 100ms;
+  border-radius: 10px;
+}
+
+.button-basic:hover {
+  text-decoration: underline;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .font-medium {
   font-size: 1rem;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.form-container {
+  margin-top: auto;
+  display: flex;
 }
 
 a {
   color: #00B7FF;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+ul > li {
+  list-style: none;
 }
 
 a:hover {

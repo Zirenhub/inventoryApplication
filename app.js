@@ -8,6 +8,7 @@ require('dotenv').config();
 
 const indexRouter = require('./routes/index');
 const categoriesRouter = require('./routes/categories');
+const itemsRouter = require('./routes/item');
 
 const app = express();
 
@@ -28,6 +29,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use('/', indexRouter);
 app.use('/category', categoriesRouter);
+app.use('/item', itemsRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

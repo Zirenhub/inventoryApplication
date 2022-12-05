@@ -34,7 +34,10 @@ exports.category_detail = (req, res) => {
         results.forEach((item) => {
           itemCount += 1;
         });
-        const currentCategory = await Category.findById(req.params.id).exec();
+        let currentCategory = await Category.findById(req.params.id).exec();
+        currentCategory.name =
+          currentCategory.name.charAt(0).toUpperCase() +
+          currentCategory.name.slice(1);
 
         res.render('category_detail', {
           title: currentCategory.name,

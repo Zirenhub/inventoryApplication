@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div.flex
+    div.spacer
+      a(href='/')
+        button.button-basic Home
+    h1.text-center.flex= title
+    div.spacer
+  
+  div.item-container
+    p Description: #{description}
+    p Price: #{price}
+    p Number In Stock: #{stock}
+    p Category: 
+      a(href=category.url) #{category.name}
+
