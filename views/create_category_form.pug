@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  a(href='/')
+    button.button-basic Home
+  div.main-container.flex.center.height.full
+    form(method='POST' action='')
+      label(for='cName') Category name:
+      br
+      input#cName(type='text' name='cName' placeholder='Category name')
+      br
+      br
+      input(type='submit' value="Submit")
+
+    if errors
+      ul
+        for error in errors
+          li!= error.msg

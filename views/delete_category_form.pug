@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  a(href='/')
+    button.button-basic Home
+  div.main-container.flex.center.height.full
+    form(method='POST' action='')
+      p Are you sure you want to delete #[span.text.bold #{category}] category ?
+      p This will delete the items inside this category.
+      br
+      input(type='submit' value="Submit")
