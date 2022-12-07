@@ -53,6 +53,29 @@ body {
 .flex {
   display: flex;
   align-items: center;
+  gap: 20px;
+}
+
+.footer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: #efefef;
+  position: fixed;
+  padding: 10px 5px;
+  bottom: 0%;
+}
+
+.text.bold {
+  font-weight: bold;
+}
+
+.height.full {
+  height: 100%;
+}
+
+.flex.center {
+  justify-content: center;
 }
 
 .item-container {
@@ -68,12 +91,16 @@ body {
 .main-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .form-container {
   margin-top: auto;
   display: flex;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
 a {
