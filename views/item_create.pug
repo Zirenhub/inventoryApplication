@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  a(href='/')
+    button.button-basic Home
+  div.main-container.flex.center.height.full
+    form(method='POST' action='').form
+      div.item-container
+        div.flex(style='justify-content: space-between')
+          label(for='itemName') *Item name:
+          input#itemName(type='text' name='itemName' placeholder='Item name')
+        div.flex(style='justify-content: space-between')
+          label(for='description') Description:
+          input#description(type='text' name='description' placeholder='Description')
+        div.flex(style='justify-content: space-between')
+          label(for='price') *Price:
+          input#price(type='number' name='price' min=1 step="0.01")
+        div.flex(style='justify-content: space-between')
+          label(for='numberInStock') *Number In Stock:
+          input#numberInStock(type='number' name='numberInStock' min=1)
+        div
+          p *Category: #{category}
+        br
+        input(type='submit' value="Submit")
+
+    if errors
+      ul
+        for error in errors
+          li!= error.msg
